@@ -113,12 +113,14 @@ header i{
 }
 
 .error{
+    display: block;
     color: #721C24;
     background-color: #F8D7DA ;
     border: 1px solid #F5C6CB;
 }
 
 .pending{
+    display: block;
     color: #0C5460;
     background-color: #D1ECF1 ;
     border: 1px solid #BEE5EB;
