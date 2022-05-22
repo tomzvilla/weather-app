@@ -32,7 +32,7 @@ locationBtn.addEventListener("click", () =>{
 })
 function onSucess(position){
     const {latitude, longitude} = position.coords;
-    api =  `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=2ae299f0d75d5cb20021181f34a5c95d`;
+    api =  `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${api_key.api}`;
     fetchData();
 
 }
@@ -44,7 +44,7 @@ function onError(error){
 
 
 function requestApi(city){
-    api =  `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=2ae299f0d75d5cb20021181f34a5c95d`;
+    api =  `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${api_key.api}`;
 
     fetchData()
 }
