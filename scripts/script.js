@@ -6,6 +6,9 @@ locationBtn = userInput.querySelector("button"),
 icon = document.querySelector(".weather-card img"),
 arrowBack = wrapper.querySelector("header i");
 
+
+var api_key = "2ae299f0d75d5cb20021181f34a5c95d";
+
 let api;
 
 const icons = {
@@ -32,7 +35,7 @@ locationBtn.addEventListener("click", () =>{
 })
 function onSucess(position){
     const {latitude, longitude} = position.coords;
-    api =  `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${api_key.api}`;
+    api =  `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${api_key}`;
     fetchData();
 
 }
@@ -44,7 +47,7 @@ function onError(error){
 
 
 function requestApi(city){
-    api =  `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${api_key.api}`;
+    api =  `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${api_key}`;
 
     fetchData()
 }
